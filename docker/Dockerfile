@@ -18,21 +18,9 @@ RUN git clone ${REPO_URL} /scripts \
         && mkdir logs \
         && npm install
 
-COPY docker_entrypoint.sh /usr/local/bin/
+RUN cp /scripts/docker/docker_entrypoint.sh /usr/local/bin \
+        && chmod +x /usr/local/bin/docker_entrypoint.sh
 
-RUN chmod +x /usr/local/bin/docker_entrypoint.sh
-
-COPY default_task.sh /scripts/docker/
-
-RUN chmod +x /scripts/docker/default_task.sh
-
-COPY proc_file.sh /scripts/docker/
-RUN chmod +x /scripts/docker/proc_file.sh
-
-COPY jdCookie.js /scripts/
-RUN chmod +x /scripts/jdCookie.js
-COPY USER_AGENTS.js /scripts/
-RUN chmod +x /scripts/USER_AGENTS.js
 WORKDIR /scripts
 
 ENTRYPOINT ["docker_entrypoint.sh"]
