@@ -31,7 +31,7 @@ let cookiesArr = [], cookie = '', message;
 const inviteCodes = [
 
 ];
-
+const randomCount=1;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
