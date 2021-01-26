@@ -44,7 +44,7 @@
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
 
-0 * * * * node /scripts/jd_xxl.js >> /scripts/logs/jd_xxl.log 2>&1
+0 10 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
 
 
 
