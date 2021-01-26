@@ -2,7 +2,7 @@
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
 
 # 京东手机年终奖
-30 9 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
+30 0,9,12,16 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
 
 # 工业品爱消除
 20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
@@ -50,7 +50,7 @@
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
 
-30 0,9,12,16 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
+
 
 
 
