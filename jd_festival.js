@@ -32,7 +32,6 @@ const randomCount = $.isNode() ? 20 : 5;
 const inviteCodes = [
 
 ];
-const randomCount=1;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
