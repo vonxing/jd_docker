@@ -43,3 +43,8 @@
 # 个护爱消除
 40 * * * * node /scripts/jd_xxl_gh.js >> /scripts/logs/jd_xxl_gh.log 2>&1
 
+
+0 * * * * node /scripts/jd_xxl.js >> /scripts/logs/jd_xxl.log 2>&1
+
+
+
