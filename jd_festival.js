@@ -76,7 +76,7 @@ const JD_API_HOST = 'https://shopping-festival.m.jd.com/sf/';
         }
         continue
       }
-      await shareCodesFormat()
+     // await shareCodesFormat()
       await festival()
       await showMsg();
     }
