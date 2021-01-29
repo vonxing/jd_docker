@@ -107,12 +107,14 @@ function getCoupon() {
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
+            console.log(data.msg);
+            console.log(data.data);
             if (data.msg ==="领取成功/展示弹层") {
-              for(let vo of data.discount){
-                if(vo.remarks.jimuid){
+              // for(let vo of data.discount){
+              //   if(vo.remarks.jimuid){
                   console.log("领取成功:"+data.discount)
                   //await receive(vo.remarks.jimuid)
-                }
+                // }
               }
             } else {
               console.log(`信息获取失败`)
