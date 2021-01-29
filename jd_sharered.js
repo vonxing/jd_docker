@@ -97,7 +97,7 @@ async function coupon(){
 }
 
 function getCoupon() {
-  let body = {"platform":3,"unionActId":"31125","actId":"2HxATPMr9wQsKhqm3oe7vshuJYDS","unionShareId":"","type":1,"eid":"-1"}
+  let body = {"platform":4,"unionActId":"31125","actId":"2HxATPMr9wQsKhqm3oe7vshuJYDS","unionShareId":"","type":1,"eid":"K2XBUXUIRZBCMYON4TECSJGWGG7G3FNGHPW6T2EBSQVMMV5WBPW5ZGU55OKVKODQAC73JEX7GCWYBOCBPAESMQKJ5A"}
   return new Promise(resolve => {
     $.post(taskPostUrlAPI('getCoupons',body), async (err, resp, data) => {
       try {
@@ -203,8 +203,9 @@ function getTs() {
 
 
 function taskPostUrlAPI(function_id, body = {}) {
+  const t = getTs()
   return {
-    url: `${JD_API_HOST}/api?functionId=${function_id}&body=${escape(JSON.stringify(body))}&client=wh5&clientVersion=1.0.0&_=${new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000}`,
+    url: `${JD_API_HOST}/api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
     headers: {
       "Accept": "*/*",
       "Accept-Encoding": "gzip, deflate, br",
@@ -212,7 +213,7 @@ function taskPostUrlAPI(function_id, body = {}) {
       "Connection": "keep-alive",
       "Content-Type": "application/x-www-form-urlencoded",
       "Host": "api.m.jd.com",
-      "origin": "https://story.m.jd.com",
+      "Origin": "https://story.m.jd.com",
       "referer": "https://story.m.jd.com/babelDiy/Zeus/2HxATPMr9wQsKhqm3oe7vshuJYDS/index.html?_native_qwd=share&_native_p=4|22171&unionActId=31125&d=w3VEdGz&s=&cu=true&utm_source=kong&utm_medium=jingfen&utm_campaign=t_2010693212_&utm_term=55ac83ee7ef54c0dbba7fc48236ed3e9",
       "Cookie": cookie,
       "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0") : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0"),
