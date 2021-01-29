@@ -107,6 +107,7 @@ function getCoupon() {
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
+            console.log(data);
             console.log(data.msg);
             console.log(data.data);
             if (data.msg ==="领取成功/展示弹层") {
