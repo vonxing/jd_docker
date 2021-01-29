@@ -239,9 +239,9 @@ function getTs() {
 
 function taskPostUrlAPI(function_id, body = {}) {
   const t = getTs()
-  console.log(cookie+":"+`${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`);
+  console.log(`${JD_API_HOST}api?functionId=${function_id}&appid=jd_mp_h5&loginType=2&client=jd_mp_h5&body=${escape(JSON.stringify(body))}`);
   return {
-    url: `${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
+    url: `${JD_API_HOST}api?functionId=${function_id}&appid=jd_mp_h5&loginType=2&client=jd_mp_h5&body=${escape(JSON.stringify(body))}`,
     headers: {
       "Accept": "*/*",
       "Accept-Encoding": "gzip, deflate, br",
