@@ -239,6 +239,7 @@ function getTs() {
 
 function taskPostUrlAPI(function_id, body = {}) {
   const t = getTs()
+  console.log(`${JD_API_HOST}/api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`);
   return {
     url: `${JD_API_HOST}/api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
     headers: {
