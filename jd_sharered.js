@@ -115,7 +115,7 @@ function getCoupon() {
                   console.log("领取成功:"+data.discount)
                   //await receive(vo.remarks.jimuid)
                 // }
-              }
+              // }
             } else {
               console.log(`信息获取失败`)
             }
