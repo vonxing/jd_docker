@@ -239,18 +239,18 @@ function getTs() {
 
 function taskPostUrlAPI(function_id, body = {}) {
   const t = getTs()
-  console.log(`${JD_API_HOST}/api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`);
+  console.log(`${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`);
   return {
-    url: `${JD_API_HOST}/api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
+    url: `${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
     headers: {
       "Accept": "*/*",
       "Accept-Encoding": "gzip, deflate, br",
       "Accept-Language": "zh-cn",
       "Connection": "keep-alive",
-      "Content-Type": "application/x-www-form-urlencoded",
+     // "Content-Type": "application/x-www-form-urlencoded",
       "Host": "api.m.jd.com",
       "Origin": "https://story.m.jd.com",
-      "referer": "https://story.m.jd.com/babelDiy/Zeus/2HxATPMr9wQsKhqm3oe7vshuJYDS/index.html?_native_qwd=share&_native_p=4|22171&unionActId=31125&d=w3VEdGz&s=&cu=true&utm_source=kong&utm_medium=jingfen&utm_campaign=t_2010693212_&utm_term=55ac83ee7ef54c0dbba7fc48236ed3e9",
+      "referer": "https://story.m.jd.com/babelDiy/Zeus/2HxATPMr9wQsKhqm3oe7vshuJYDS/index.html?_native_qwd=share&_native_p=4|22171&unionActId=31125&d=w3VEdGz&s=&cu=true&utm_source=kong&utm_medium=jingfen&utm_campaign=t_2010693212_",
       "Cookie": cookie,
       "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0") : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0"),
     }
