@@ -93,9 +93,45 @@ function showMsg() {
 async function coupon(){
   $.times = 0
   $.risk = false
+  await showCoupon()
   await getCoupon()
 }
-
+function showCoupon(){
+  {
+    let body = {"actId":"2HxATPMr9wQsKhqm3oe7vshuJYDS","unionActId":"31125","unpl":"V2_ZzNtbUtXERYhABMBLE1UBWJXF1lKUUsVd1tFBy8eDgU3BkVUclRCFnUUR1RnGlQUZwEZXEtcQxRFCEJkeBhcBGALEF5CVHMlfQAoVzYZMgYJAF8QD2dAFUUJdlR8GVwMbwQbVEpeRhN1D0RUeBtcB2cKIm1CUXMlRQl2VUsYbE4JAl9dRVdDHH0PT11zEFkDZwQQXUFVQxd1AXZWexlfAVcA|V2_ZzNtbUIDQhZ8XBUAe0kLAWJQEVoSAxdHIFpBBngbXwNiChBZclRCFnUUR1RnGFgUZwoZXUtcRhFFCEJkexhdBGYFFFVKU3MlfGZFVn4aVAZgARYzQlZCezRMBA0VSgxaMVxKFhsJHEMnWBhkeBlsBFcBQl5FUEYQdAkWAXoRDwBiV0IKEAMTQidfTwR5EQkNZlMRVUtXQ0F0OHZdeilbDGECFVhBVkIRfDhFUXoaWgNmChZBS15HEXQKdlVLGGwEV0J8WkRSQRJ2RUQEeB5bAGICEw0XVktGcA0SBCxLCFUwUUVUElVLQH0JFldzEFwFMwIiXHJX","platform":4,"unionShareId":"","uiUpdateTime":1610941274000,"eid":"K2XBUXUIRZBCMYON4TECSJGWGG7G3FNGHPW6T2EBSQVMMV5WBPW5ZGU55OKVKODQAC73JEX7GCWYBOCBPAESMQKJ5A"}
+    return new Promise(resolve => {
+      $.post(taskPostUrlAPI('showCoupon',body), async (err, resp, data) => {
+        try {
+          if (err) {
+            console.log(`${JSON.stringify(err)}`)
+            console.log(`${$.name} API请求失败，请检查网路重试`)
+          } else {
+            if (safeGet(data)) {
+              data = JSON.parse(data);
+              console.log(data);
+              console.log(data.msg);
+              console.log(data.data);
+              if (data.msg ==="领取成功/展示弹层") {
+                // for(let vo of data.discount){
+                //   if(vo.remarks.jimuid){
+               // console.log("领取成功:"+data.discount)
+                //await receive(vo.remarks.jimuid)
+                // }
+                // }
+              } else {
+                console.log(`信息获取失败`)
+              }
+            }
+          }
+        } catch (e) {
+          $.logErr(e, resp)
+        } finally {
+          resolve();
+        }
+      })
+    })
+  }
+}
 function getCoupon() {
   let body = {"platform":4,"unionActId":"31125","actId":"2HxATPMr9wQsKhqm3oe7vshuJYDS","unionShareId":"","type":1,"eid":"K2XBUXUIRZBCMYON4TECSJGWGG7G3FNGHPW6T2EBSQVMMV5WBPW5ZGU55OKVKODQAC73JEX7GCWYBOCBPAESMQKJ5A"}
   return new Promise(resolve => {
