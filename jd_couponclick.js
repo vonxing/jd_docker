@@ -94,10 +94,44 @@ async function festival() {
   $.times = 0
   $.risk = false
   await getInfo()
+  await getInfo2()
 }
 
-function getInfo() {
+async function getInfo() {
   let body = {"activityId":"25YetSkaqwFdNWvbWfsLQy7svUZv","scene":"1","args":"key=DE92DFDFC45A3B1D909B7DDE33F96D8750F31E9422747C43D0644353920A214FEDD096ED05291727E99EABABE19DEB0E_babel,roleId=7876A476FFEA444305DC4069E0D6A2EA_babel","pageClick":"Babel_Coupon","mitemAddrId":"","geo":{"lng":"","lat":""}};
+  return new Promise(resolve => {
+    $.post(taskPostUrl('newBabelAwardCollection',body), async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} API请求失败，请检查网路重试`)
+        } else {
+          if (safeGet(data)) {
+            data = JSON.parse(data);
+            console.log("info:"+data.subCodeMsg)
+            // if (data.msg ==="success") {
+            //   for(let vo of data.floorList){
+            //     if(vo.remarks.jimuid){
+            //       console.log(vo.remarks.jimuid)
+            //      // await receive(vo.remarks.jimuid)
+            //     }
+            //   }
+            // } else {
+            //   console.log(`信息获取失败`)
+            // }
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve();
+      }
+    })
+  })
+}
+
+async function getInfo2() {
+  let body = {"activityId":"25YetSkaqwFdNWvbWfsLQy7svUZv","scene":"1","args":"key=1058A3D4F72BA40B66D0C9584ACDA8AB1C1C3A149ABD0F7FF336E182F13880D1BAB97626DBEEC15825AE41019CD7DDA4_babel,roleId=343EE057A61EAE3622023DF265FC90F4_babel","eid":"XEAJYL663F4NOITJZH2VB7AJCCMKVEC6KBD6PX4MY66OAD7RFGKGVSZYL2W4VIOLGFGKCDRF5QH7UG6JE4ME2TPP34","fp":"2dafc29f46852e6ed97ccbc50285d109","pageClick":"Babel_Coupon","mitemAddrId":"","geo":{"lng":"","lat":""}}
   return new Promise(resolve => {
     $.post(taskPostUrl('newBabelAwardCollection',body), async (err, resp, data) => {
       try {
