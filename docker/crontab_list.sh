@@ -33,7 +33,8 @@
 
 # 京东秒秒币
 #10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
-
+0 0,9,13,18,20 * * * node /scripts/jd_couponclick.js >> /scripts/logs/jd_couponclick.log 2>&1
+59 59 23,8,12,17,19 * * * node /scripts/jd_couponclick.js >> /scripts/logs/jd_couponclick.log 2>&1
 # 超级直播间任务赢京豆
 #40 21 * * * node /scripts/jd_super.js >> /scripts/logs/jd_super.log 2>&1
 
