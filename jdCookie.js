@@ -6,11 +6,8 @@ let CookieJDs = [
   // 'pt_key=AAJf984RAECzwZKMzVn8dGcIDS6qKirEYEkIrm4K_HChABQulnJ9CK6sPz1NOflOF4S4TOtntgLpLBd8dTo0c-UplwRNNJtQ;pt_pin=%E8%A2%AB%E6%8A%98%E5%8F%A0%E7%9A%84%E8%AE%B0%E5%BF%8633;',//账号一ck,例:pt_key=XXX;pt_pin=XXX;
   // 'pt_key=AAJf98v-ADD8aNomR4VVWb3lJOyf--E8ih-TDF-RTUBSfzc2TFd6lb0arnuhJhkT-74y5NQkLcA;pt_pin=jd_6cd93e613b0e5;',//账号二ck,例:pt_key=XXX;pt_pin=XXX;如有更多,依次类推
   // `pt_key=AAJf3InLADD8WK3k6m4BQa5uPY0xCNO_77KW1ExAMw9sZwORL-RmR8x-4WSGIS01JdPAaHxn3aw;pt_pin=jd_45a6b5953b15b;`,
-  // `pt_key=AAJf-PyGADCTZfq8uJ822d_tXGNj7EVeEvRv9r13O3BRxTPGjnjC2g1ezxNACWk2FzRxKsqemAM;pt_pin=jd_704a2e5e28a66;`,
-  `pt_key=AAJf-VVeADCfU90dQx6UDcM7OQB2smAthYkvPy_S5f9mmOQSzrtYne8qOyN1fVT816e267CWPCM;pt_pin=jd_66f5cecc1efcd;`,
-  `pt_key=AAJf-SRSADCsx12ZSVGd5I_UXpnKmRa6gLJ2ZooRB-d6zcVNUwCFDVuWvPVy__90kfq8nwrxPY4;pt_pin=jd_sIhNpDXJehOr;`,
-  `pt_key=AAJf5-tYADD_9AG0Jg6JxIjiHGBD2kC6ng_QtQtHatQGJAENxAjXBiK5suO_4lgSWAOfdn-cF14;pt_pin=jd_5851f32d4a083;`,
-  `pt_key=AAJf3v5jADCcMSoHMF47wTpr6J6HSJmHO5uD8j0iAGQhZyFgvp04Ib38R6K5VcmvJF4GkVT4wJU;pt_pin=zooooo58;`,
+  ` pt_key=AAJgELyQADB3AN3Ex86jcMplOolllMaeoZs8T2kp-jE1GeNF0QwwiEvkM5Yg2eInI0fVgnQ0fBE; pt_pin=vonxingb;   __jda=122270672.1608019445517549061181.1608019446.1611891862.1611904582.23; __jdb=122270672.1.1608019445517549061181|23.1611904582; __jdv=122270672%7Ckong%7Ct_2010693212_%7Cjingfen%7C61685f2bfe4a4e5887ea0cd08d10fa93%7C1611904582499; mba_sid=16119045825019013685412751352.1`,
+  // `pt_key=AAJgBQHiADCNVqltl25a1ecyf-5SPCQk81TRYARl_fq_YlKWjNS14cJf6SY-ZTruSDj9J2tEYN4; pt_pin=jeran;`,
   //   `pt_key=AAJf9m4HADBhVVgIQw1SQLyjsfETeeGa4RFZryFkPWP8vMkk-oI7bCWOmTb_o3CNyldcKGmFj00;pt_pin=14542702-703743;`,
   //   `pt_key=AAJf5zunADBzbaV7S0F-DFyRFCyHYlKw4IH3lLIe6I4VJE9wZobxD9erVzaRmaSEJnZQZrRFnKc;pt_pin=jd_5b54a8d20c8ba;`,
   //   `pt_key=AAJf4yjNADCyJmWZW9Z_tCkKfE0OjISu9WTOFSuyHzNAhGqS3QqR8kEBZY9XNGXg6o_K3axMVqw;pt_pin=ojdo9527;`

@@ -94,7 +94,7 @@ async function coupon(){
   $.times = 0
   $.risk = false
   await showCoupon()
-  await getCoupon()
+  //await getCoupon()
 }
 function showCoupon(){
   {
@@ -239,20 +239,20 @@ function getTs() {
 
 function taskPostUrlAPI(function_id, body = {}) {
   const t = getTs()
-  console.log(`${JD_API_HOST}api?functionId=${function_id}&appid=jd_mp_h5&loginType=2&client=jd_mp_h5&body=${escape(JSON.stringify(body))}`);
+  //console.log(`${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`);
   return {
-    url: `${JD_API_HOST}api?functionId=${function_id}&appid=jd_mp_h5&loginType=2&client=jd_mp_h5&body=${escape(JSON.stringify(body))}`,
+    url: `${JD_API_HOST}api?functionId=${function_id}&appid=u&_=${t}&loginType=2&body=${escape(JSON.stringify(body))}&client=apple&clientVersion=8.3.6`,
     headers: {
       "Accept": "*/*",
       "Accept-Encoding": "gzip, deflate, br",
       "Accept-Language": "zh-cn",
       "Connection": "keep-alive",
      // "Content-Type": "application/x-www-form-urlencoded",
-      "Host": "api.m.jd.com",
+     //  "Host": "api.m.jd.com",
       "Origin": "https://story.m.jd.com",
       "referer": "https://story.m.jd.com/babelDiy/Zeus/2HxATPMr9wQsKhqm3oe7vshuJYDS/index.html?_native_qwd=share&_native_p=4|22171&unionActId=31125&d=w3VEdGz&s=&cu=true&utm_source=kong&utm_medium=jingfen&utm_campaign=t_2010693212_",
       "Cookie": cookie,
-      "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0") : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.2.2;14.2;%E4%BA%AC%E4%B8%9C/9.2.2 CFNetwork/1206 Darwin/20.1.0"),
+      "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36',
     }
   }
 }
